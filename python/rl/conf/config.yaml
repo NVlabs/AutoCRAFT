@@ -1,0 +1,268 @@
+root_dir: /home/scratch.haochen_nvresearch/projects/autocraft
+defaults:
+  - _self_
+  - arch:
+    #- dv5t_crg_fll_ana_obsa
+    #- dv5t_crg_fll_ana_obsd
+    #- dv5t_crg_fll_ana_vco4
+    #- dv5t_crg_fll_ana_vco4_core
+    #- isr_des
+    #- isr_clk_pi
+    - isr_clk_pi_s1
+    - isr_clk_pi_s2
+    - isr_clk_pi_s3
+    #- isr_clk_pi_pruned
+    #- isr_clk_pi_pruned_s1
+    #- isr_clk_pi_pruned_s2
+    #- isr_clk_pi_pruned_s3
+    #- magic_array_inv_0
+    #- magic_array_inv_1
+    #- magic_array_inv_2
+    #- magic_array_inv_3
+    #- magic_array_inv_4
+    #- magic_array_inv_5
+    #- magic_array_inv_6
+    #- magic_array_inv_7
+    #- magic_array_inv_8
+    #- magic_array_inv_9
+    #- magic_array_latch_0
+    #- magic_array_latch_1
+    #- magic_array_latch_2
+    #- magic_array_latch_3
+    #- magic_array_latch_4
+    #- magic_array_latch_5
+    #- magic_array_latch_6
+    #- magic_array_latch_7
+    #- magic_array_latch_8
+    #- magic_array_latch_9
+    #- magic_array_dff_0
+    #- magic_array_dff_1
+    #- magic_array_dff_2
+    #- magic_array_dff_3
+    #- magic_array_dff_4
+    #- magic_array_dff_5
+    #- magic_array_dff_6
+    #- magic_array_dff_7
+    #- magic_array_dff_8
+    #- magic_array_dff_9
+
+
+seed: 2
+
+place_threads: 1
+place_ar: 1.0
+place_ur: 0.4
+#place_ur_reg_name:
+#place_ur_reg_val:
+#place_bbox:
+place_iter: 1
+
+ray_tune_resume: False
+ray_tune_run_dir: null
+ray_tune_run_name: null
+#ray_tune_resume: True
+#ray_tune_run_dir: "/home/scratch.haochen_nvresearch/projects/autocraft/python/outputs/2022-04-15/21-22-51/" 
+#ray_tune_run_name: "ApexTrainer_2022-04-15_21-22-52"
+
+#rl_hier_checkpoint: ${root_dir}/python/rl/models/PPOTrainer_2022-07-12_17-48-22/PPOTrainer_ac_route_rl_multicir_env_path_match_d2d0d_00000_0_2022-07-12_17-48-22/checkpoint_000864/checkpoint-864
+#rl_hier_config: ${root_dir}/python/rl/models/PPOTrainer_2022-07-12_17-48-22/PPOTrainer_ac_route_rl_multicir_env_path_match_d2d0d_00000_0_2022-07-12_17-48-22/params.pkl
+#rl_hier_top_level_model_fixed_weights: True
+#rl_hier_mid_level_model_fixed_weights: True
+#rl_hier_low_level_model_fixed_weights: True
+
+#rl_checkpoint: ${root_dir}/python/models/path/82043/PPOTrainer_ac_route_rl_multicir_env_path_match_82043_00000_0_2022-07-25_22-09-53/checkpoint_001518/checkpoint-1518
+#rl_config: ${root_dir}/python/models/path/82043/PPOTrainer_ac_route_rl_multicir_env_path_match_82043_00000_0_2022-07-25_22-09-53/params.pkl
+
+ray_multi_node: False
+#ray_multi_node: True
+
+topo_dict: ${root_dir}/python/rl/topo_dict/merged/topo_dict_vco4_core_clk_new_unique_10.json
+#topo_dict: ${root_dir}/python/rl/topo_dict/merged/topo_dict_obsd_new_unique_10.json
+#collect_topo: True 
+collect_topo: False
+
+
+###################################################
+#                   envs 
+###################################################
+rl_env: "ac_route_rl_multicir_env_path_match_group"
+rl_callbacks: "ac_route_callbacks_path_match_group"
+
+#rl_hier: True
+rl_hier: False
+
+rl_top_level_policy: "ppo"
+rl_mid_level_policy: "ppo"
+rl_policy: "ppo"
+
+rl_top_level_model: "ac_route_ppo_top_level_model_path"
+rl_mid_level_model: "ac_route_ppo_mid_level_model_path"
+rl_model:           "ac_route_ppo_model_path_group"
+
+
+rl_top_level_reward_constant: 0
+rl_top_level_reward_weight_wl: 0
+rl_top_level_reward_weight_via: 0
+rl_top_level_reward_weight_drv: 1
+rl_top_level_reward_weight_res: 30
+
+rl_mid_level_reward_constant: 0
+rl_mid_level_reward_weight_wl: 0
+rl_mid_level_reward_weight_via: 0
+rl_mid_level_reward_weight_drv: 1
+rl_mid_level_reward_weight_res: 30
+
+rl_reward_constant: 0
+rl_reward_weight_wl: 0.01
+rl_reward_weight_via: 0.01
+rl_reward_weight_drv: 1
+rl_reward_weight_res: 30
+rl_reward_weight_wl_ptp: 5
+rl_reward_weight_via_ptp: 5
+
+rl_max_nets_per_group: 10
+rl_max_segs: 180 # per net
+rl_max_paths: 16 # per net
+rl_max_path_cstrs: 10 # max path cstr in a match group
+
+rl_net_max_pin: 20
+rl_min_reset_reroutes: 0
+rl_max_reset_reroutes: 10
+
+rl_top_level_max_steps: 5
+rl_mid_level_max_steps: 3
+rl_max_steps: 150 # low level
+
+rl_mid_level_d_ratio_thre: 0.05
+
+rl_path_segs_norm_constant: 50
+rl_wl_norm_constant: 5000
+rl_via_norm_constant: 50
+rl_res_norm_constant: 3000
+rl_res_ptp_epsilon: 10
+rl_his_norm_constant: 100
+
+
+###################################################
+#                  features
+###################################################
+rl_seg_feat_dim: 20 # 10 seg feat (+ 2 target for wl/via matching)
+rl_path_feat_dim: 5 # 4 path feat + 1 target
+rl_super_feat_dim: 3 # [ptp, avg, std]
+
+# flat level
+rl_seg_to_seg_gnn_feat_dim: [128, 128]
+rl_path_to_seg_gnn_feat_dim: [10] # used in low_level
+rl_seg_to_path_gnn_feat_dim: [128] # used in flat group path matching
+rl_path_to_super_gnn_feat_dim: [128]
+rl_super_to_seg_gnn_feat_dim: [128]
+rl_advantage_module_hiddens: [256, 256] # advantage/Q module
+rl_value_module_hiddens: [256, 256]
+rl_lr: 0.0001
+rl_gamma: 0.99
+rl_seg_to_seg_gnn_sage_aggregator: 'pool'
+rl_seg_to_path_gnn_sage_aggregator: 'pool'
+rl_path_to_super_gnn_sage_aggregator: 'pool'
+rl_super_to_seg_gnn_sage_aggregator: 'pool'
+
+# top_level (ss -> sp -> pp)
+rl_top_level_seg_to_seg_gnn_feat_dim: [128, 128]
+rl_top_level_seg_to_path_gnn_feat_dim: [128]
+rl_top_level_path_to_super_gnn_feat_dim: [128]
+rl_top_level_super_to_super_gnn_feat_dim: [128]
+rl_top_level_advantage_module_hiddens: [256, 256] # advantage/Q module
+rl_top_level_value_module_hiddens: [256, 256]
+rl_top_level_lr: 0.0001
+rl_top_level_gamma: 0.99
+rl_top_level_seg_to_seg_gnn_sage_aggregator: 'pool'
+rl_top_level_seg_to_path_gnn_sage_aggregator: 'pool'
+rl_top_level_path_to_super_gnn_sage_aggregator: 'pool'
+rl_top_level_super_to_super_gnn_sage_aggregator: 'pool'
+
+# mid_level (ss -> sp -> pp)
+rl_mid_level_seg_to_seg_gnn_feat_dim: [128, 128]
+rl_mid_level_seg_to_path_gnn_feat_dim: [128]
+rl_mid_level_path_to_super_gnn_feat_dim: [128]
+rl_mid_level_super_to_super_gnn_feat_dim: [128]
+rl_mid_level_advantage_module_hiddens: [256, 256] # advantage/Q module
+rl_mid_level_value_module_hiddens: [256, 256]
+rl_mid_level_lr: 0.0001
+rl_mid_level_gamma: 0.99
+rl_mid_level_seg_to_seg_gnn_sage_aggregator: 'pool'
+rl_mid_level_seg_to_path_gnn_sage_aggregator: 'pool'
+rl_mid_level_path_to_super_gnn_sage_aggregator: 'pool'
+rl_mid_level_super_to_super_gnn_sage_aggregator: 'pool'
+
+
+# image feature
+#rl_image_x_size: 160
+#rl_image_y_size: 120
+#rl_image_x_step: 51
+#rl_image_y_step: 140
+#rl_image_bbox_expand_fc: 0.1
+
+
+###################################################
+#                  training 
+###################################################
+rl_iters: 2000
+rl_num_workers: 1
+rl_num_cpus_per_worker: 1
+rl_num_gpus_per_worker: 0
+rl_num_envs_per_worker: 1
+rl_num_gpus: 0
+rl_num_cpus_for_driver: 0 # only for Tune
+rl_evaluation_interval: 0
+rl_evaluation_duration: 128
+rl_evaluation_duration_unit: 'episodes'
+rl_evaluation_num_workers: 0
+rl_custom_eval_function: null
+rl_always_attach_evaluation_results: True
+rl_batch_mode: 'truncate_episodes'
+
+rl_rollout_fragment_length: 100
+rl_train_batch_size: 6400
+
+# ppo 
+ppo_use_critic:              { top: True,  mid: True,  low: True  }
+ppo_use_gae:                 { top: True,  mid: True,  low: True  }
+ppo_lambda:                  { top: 1.0,   mid: 1.0,   low: 1.0   }
+ppo_kl_coeff:                { top: 0.2,   mid: 0.2,   low: 0.2   }
+ppo_sgd_minibatch_size:      { top: 32,    mid: 32,    low: 128   }
+ppo_shuffle_sequences:       { top: True,  mid: True,  low: True  }
+ppo_num_sgd_iter:            { top: 30,    mid: 30,    low: 30    }
+ppo_vf_loss_coeff:           { top: 1.0,   mid: 1.0,   low: 1.0   }
+ppo_vf_share_layers:         { top: False, mid: False, low: False }
+ppo_entropy_coeff:           { top: 0.01,  mid: 0.01,  low: 0.01  }
+ppo_clip_param:              { top: 0.3,   mid: 0.3,   low: 0.3   }
+ppo_vf_clip_param:           { top: 10.0,  mid: 10.0,  low: 10.0  }
+ppo_grad_clip:               { top: null,  mid: null,  low: null  }
+ppo_kl_target:               { top: 0.01,  mid: 0.01,  low: 0.01  }
+
+# impala
+#impala_vtrace:                       { top: True, mid: True, low: True }
+#impala_vtrace_clip_rho_threshold:    { top: 1.0,  mid: 1.0,  low: 1.0  }
+#impala_vtrace_clip_pg_rho_threshold: { top: 1.0,  mid: 1.0,  low: 1.0  }
+#impala_vtrace_drop_last_ts:          { top: True, mid: True, low: True }
+#impala_num_sgd_iter:                 { top: 1,    mid: 1,    low: 1    }
+#impala_minibatch_buffer_size:        { top: 1,    mid: 1,    low: 1    }
+#impala_replay_proportion:            { top: 0.0,  mid: 0.0,  low: 0.0  }
+#impala_replay_buffer_num_slots:      { top: 0,    mid: 0,    low: 0    }
+#impala_vf_loss_coeff:                { top: 0.05, mid: 0.05, low: 0.05 }
+#impala_entropy_coeff:                { top: 0.01, mid: 0.01, low: 0.01 }
+
+# apex dqn
+#apex_dqn_dueling:                    { top: True,    mid: True,    low: True    }  
+#apex_dqn_double_q:                   { top: True,    mid: True,    low: True    } 
+#apex_dqn_timesteps_per_iteration:    { top: 100000,  mid: 100000,  low: 100000  } 
+#apex_dqn_learning_starts:            { top: 50000,   mid: 50000,   low: 50000   } 
+#apex_dqn_target_network_update_freq: { top: 1000000, mid: 1000000, low: 1000000 } 
+#apex_dqn_training_intensity:         { top: null,    mid: null,    low: null    } 
+#apex_dqn_num_replay_buffer_shards:   { top: 4,       mid: 4,       low: 4       } 
+#apex_dqn_buffer_size:                { top: 2000000, mid: 2000000, low: 2000000 } 
+
+
+#hydra:                              
+  #run:                              
+    #dir: /results
+                                     
