@@ -52,10 +52,7 @@ AutoCRAFT
       |     |---- Hspice netlist parser
       |     |---- Grid file parser
       |     |---- Constraint file parser
-      |---- Writer
-            |---- GV writer (.gv files for ICC2)
-            |---- GDSII writer (deprecated, now use ICC2 for final layout)
-            |---- Tcl writer (ICC2 Tcl commands)
+     
 ```
 
 ## Dependencies
