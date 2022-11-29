@@ -1,0 +1,658 @@
+root_dir: /home/scratch.haochen_nvresearch/projects/autocraft
+
+seed: 2
+
+place_threads: 1
+place_ar: 1.0
+place_ur: 0.4
+#place_ur_reg_name:
+#place_ur_reg_val:
+#place_bbox:
+place_iter: 1
+
+bench: ???
+icc_path: ???
+
+###################################################
+#                   RL  
+###################################################
+rl_num_iter: 1
+
+###################
+# low-level 
+##################
+# obsd
+#rl_checkpoint: ${root_dir}/python/models/path/7e344/PPOTrainer_ac_route_rl_multicir_env_path_match_7e344_00000_0_2022-07-31_16-47-41/checkpoint_001852/checkpoint-1852
+#rl_config: ${root_dir}/python/models/path/7e344/PPOTrainer_ac_route_rl_multicir_env_path_match_7e344_00000_0_2022-07-31_16-47-41/params.pkl
+
+# vco4_core
+#rl_checkpoint: ${root_dir}/python/models/path/82043/PPOTrainer_ac_route_rl_multicir_env_path_match_82043_00000_0_2022-07-25_22-09-53/checkpoint_001518/checkpoint-1518
+#rl_config: ${root_dir}/python/models/path/82043/PPOTrainer_ac_route_rl_multicir_env_path_match_82043_00000_0_2022-07-25_22-09-53/params.pkl
+
+# obsd + vco4_core
+#rl_checkpoint: ${root_dir}/python/models/path/2a7c9/PPOTrainer_ac_route_rl_multicir_env_path_match_2a7c9_00000_0_2022-08-04_23-14-20/checkpoint_001599/checkpoint-1599
+#rl_config: ${root_dir}/python/models/path/2a7c9/PPOTrainer_ac_route_rl_multicir_env_path_match_2a7c9_00000_0_2022-08-04_23-14-20/params.pkl
+
+###################
+# path group
+###################
+#rl_checkpoint: ${root_dir}/python/models/path_group/0cc6f/PPOTrainer_ac_route_rl_multicir_env_path_match_group_0cc6f_00000_0_2022-08-03_06-32-30/checkpoint_000261/checkpoint-261
+#rl_config: ${root_dir}/python/models/path_group/0cc6f/PPOTrainer_ac_route_rl_multicir_env_path_match_group_0cc6f_00000_0_2022-08-03_06-32-30/params.pkl
+#rl_checkpoint: ${root_dir}/python/models/path_group/d8c12/PPOTrainer_ac_route_rl_multicir_env_path_match_group_d8c12_00000_0_2022-08-05_04-05-31/checkpoint_000826/checkpoint-826
+#rl_config: ${root_dir}/python/models/path_group/d8c12/PPOTrainer_ac_route_rl_multicir_env_path_match_group_d8c12_00000_0_2022-08-05_04-05-31/params.pkl
+
+# obsd + core
+#rl_checkpoint: ${root_dir}/python/models/path_group/9ea62/PPOTrainer_ac_route_rl_multicir_env_path_match_group_9ea62_00000_0_2022-08-05_06-05-35/checkpoint_001115/checkpoint-1115
+#rl_config: ${root_dir}/python/models/path_group/9ea62/PPOTrainer_ac_route_rl_multicir_env_path_match_group_9ea62_00000_0_2022-08-05_06-05-35/params.pkl
+
+# pi
+#rl_checkpoint: ${root_dir}/python/models/path_group/cf09b/PPOTrainer_ac_route_rl_multicir_env_path_match_group_cf09b_00000_0_2022-08-22_22-02-38/checkpoint_000806/checkpoint-806
+#rl_config: ${root_dir}/python/models/path_group/cf09b/PPOTrainer_ac_route_rl_multicir_env_path_match_group_cf09b_00000_0_2022-08-22_22-02-38/params.pkl
+
+#rl_checkpoint: ${root_dir}/python/models/path_group/1f71a/PPOTrainer_ac_route_rl_multicir_env_path_match_group_1f71a_00000_0_2022-08-25_13-47-24/checkpoint_000002/checkpoint-2
+#rl_config: ${root_dir}/python/models/path_group/1f71a/PPOTrainer_ac_route_rl_multicir_env_path_match_group_1f71a_00000_0_2022-08-25_13-47-24/params.pkl
+
+#rl_checkpoint: ${root_dir}/python/models/path_group/a179f/PPOTrainer_ac_route_rl_multicir_env_path_match_group_a179f_00000_0_2022-08-27_18-27-50/checkpoint_001049/checkpoint-1049
+#rl_config: ${root_dir}/python/models/path_group/a179f/PPOTrainer_ac_route_rl_multicir_env_path_match_group_a179f_00000_0_2022-08-27_18-27-50/params.pkl
+
+#rl_checkpoint: ${root_dir}/python/models/path_group/b625f/PPOTrainer_ac_route_rl_multicir_env_path_match_group_b625f_00000_0_2022-08-26_21-33-23/checkpoint_001694/checkpoint-1694
+#rl_config: ${root_dir}/python/models/path_group/b625f/PPOTrainer_ac_route_rl_multicir_env_path_match_group_b625f_00000_0_2022-08-26_21-33-23/params.pkl
+
+#rl_checkpoint: ${root_dir}/python/models/path_group/8c3be/PPOTrainer_ac_route_rl_multicir_env_path_match_group_8c3be_00000_0_2022-08-31_17-03-45/checkpoint_000714/checkpoint-714
+#rl_config: ${root_dir}/python/models/path_group/8c3be/PPOTrainer_ac_route_rl_multicir_env_path_match_group_8c3be_00000_0_2022-08-31_17-03-45/params.pkl
+
+# obsd + core + pi
+#rl_checkpoint: ${root_dir}/python/models/path_group/68d79/PPOTrainer_ac_route_rl_multicir_env_path_match_group_68d79_00000_0_2022-09-01_12-15-15/checkpoint_000603/checkpoint-603
+#rl_config: ${root_dir}/python/models/path_group/68d79/PPOTrainer_ac_route_rl_multicir_env_path_match_group_68d79_00000_0_2022-09-01_12-15-15/params.pkl
+
+#rl_checkpoint: ${root_dir}/python/models/path_group/f7a4b/PPOTrainer_ac_route_rl_multicir_env_path_match_group_f7a4b_00000_0_2022-09-02_15-45-39/checkpoint_000878/checkpoint-878
+#rl_config: ${root_dir}/python/models/path_group/f7a4b/PPOTrainer_ac_route_rl_multicir_env_path_match_group_f7a4b_00000_0_2022-09-02_15-45-39/params.pkl
+
+##### 9ee13
+##### cp-640 best for obsd: iter 1
+##### cp-640 best for vco4: iter 10
+##### cp-640 best for pi: iter 3
+#rl_checkpoint: ${root_dir}/python/models/path_group/9ee13/PPOTrainer_ac_route_rl_multicir_env_path_match_group_9ee13_00000_0_2022-09-03_14-01-46/checkpoint_000640/checkpoint-640
+#rl_config: ${root_dir}/python/models/path_group/9ee13/PPOTrainer_ac_route_rl_multicir_env_path_match_group_9ee13_00000_0_2022-09-03_14-01-46/params.pkl
+
+##### 28c3f 
+#rl_checkpoint: ${root_dir}/python/models/path_group/28c3f/PPOTrainer_ac_route_rl_multicir_env_path_match_group_28c3f_00000_0_2022-09-06_15-06-29/checkpoint_000651/checkpoint-651
+#rl_config: ${root_dir}/python/models/path_group/28c3f/PPOTrainer_ac_route_rl_multicir_env_path_match_group_28c3f_00000_0_2022-09-06_15-06-29/params.pkl
+
+##### 794e0 
+#rl_checkpoint: ${root_dir}/python/models/path_group/794e0/PPOTrainer_ac_route_rl_multicir_env_path_match_group_794e0_00000_0_2022-09-07_21-34-06/checkpoint_000554/checkpoint-554
+#rl_config: ${root_dir}/python/models/path_group/794e0/PPOTrainer_ac_route_rl_multicir_env_path_match_group_794e0_00000_0_2022-09-07_21-34-06/params.pkl
+
+#### New cstr (c6f2b)
+#rl_checkpoint: ${root_dir}/python/models/path_group/c6f2b/PPOTrainer_ac_route_rl_multicir_env_path_match_group_c6f2b_00000_0_2022-09-09_16-33-15/checkpoint_000993/checkpoint-993
+#rl_config: ${root_dir}/python/models/path_group/c6f2b/PPOTrainer_ac_route_rl_multicir_env_path_match_group_c6f2b_00000_0_2022-09-09_16-33-15/params.pkl
+
+##### 1a816
+#rl_checkpoint: ${root_dir}/python/models/path_group/1a816/PPOTrainer_ac_route_rl_multicir_env_path_match_group_1a816_00000_0_2022-09-10_18-14-37/checkpoint_000772/checkpoint-772
+#rl_config: ${root_dir}/python/models/path_group/1a816/PPOTrainer_ac_route_rl_multicir_env_path_match_group_1a816_00000_0_2022-09-10_18-14-37/params.pkl
+
+##### 6e76b
+#rl_checkpoint: ${root_dir}/python/models/path_group/6e76b/PPOTrainer_ac_route_rl_multicir_env_path_match_group_6e76b_00000_0_2022-09-11_15-31-08/checkpoint_000896/checkpoint-896
+#rl_config: ${root_dir}/python/models/path_group/6e76b/PPOTrainer_ac_route_rl_multicir_env_path_match_group_6e76b_00000_0_2022-09-11_15-31-08/params.pkl
+
+##### fdc29 
+#rl_checkpoint: ${root_dir}/python/models/path_group/fdc29/PPOTrainer_ac_route_rl_multicir_env_path_match_group_fdc29_00000_0_2022-09-12_18-25-46/checkpoint_000624/checkpoint-624
+#rl_config: ${root_dir}/python/models/path_group/fdc29/PPOTrainer_ac_route_rl_multicir_env_path_match_group_fdc29_00000_0_2022-09-12_18-25-46/params.pkl
+
+## fine-tuning pi, pretrain 69914
+#rl_checkpoint: ${root_dir}/python/models/path_group/69914/PPOTrainer_ac_route_rl_multicir_env_path_match_group_69914_00000_0_2022-09-17_10-23-14/checkpoint_001152/checkpoint-1152
+#rl_config: ${root_dir}/python/models/path_group/69914/PPOTrainer_ac_route_rl_multicir_env_path_match_group_69914_00000_0_2022-09-17_10-23-14/params.pkl
+#rl_checkpoint: ${root_dir}/python/models/path_group/2162a/PPOTrainer_ac_route_rl_multicir_env_path_match_group_2162a_00000_0_2022-09-19_22-00-22/checkpoint_001508/checkpoint-1508
+#rl_config: ${root_dir}/python/models/path_group/2162a/PPOTrainer_ac_route_rl_multicir_env_path_match_group_2162a_00000_0_2022-09-19_22-00-22/params.pkl
+
+##### from scratch: pi
+rl_checkpoint: ${root_dir}/python/models/path_group/c7b81/PPOTrainer_ac_route_rl_multicir_env_path_match_group_c7b81_00000_0_2022-09-20_16-27-23/checkpoint_000416/checkpoint-416
+rl_config: ${root_dir}/python/models/path_group/c7b81/PPOTrainer_ac_route_rl_multicir_env_path_match_group_c7b81_00000_0_2022-09-20_16-27-23/params.pkl
+
+
+hydra:
+  run:
+    dir: ./
+
+arch:
+  dv5t_crg_fll_ana_obsa:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/dv5t_crg_fll_ana_obsa/dv5t_crg_fll_ana_obsa.grid.yaml
+    map:          ${root_dir}/bench/dv5t_crg_fll_ana_obsa/dv5t_crg_fll_ana_obsa.map.yaml
+    constraint:   ${root_dir}/bench/dv5t_crg_fll_ana_obsa/dv5t_crg_fll_ana_obsa.constraint.rl.yaml
+    lef:
+                - ${root_dir}/bench/dv5t_crg_fll_ana_obsa/dv5t_crg_fll_ana_obsa.template.lef
+                - ${root_dir}/bench/dv5t_crg_fll_ana_obsa/dv5t_crg_fll_ana_obsa.via.lef
+    drc:          ${root_dir}/bench/dv5t_crg_fll_ana_obsa/layers.drc.yaml
+    netlist:      ${root_dir}/bench/dv5t_crg_fll_ana_obsa/dv5t_crg_fll_ana_obsa.cir
+    in_place:     ${root_dir}/out/dv5t_crg_fll_ana_obsa.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  
+  dv5t_crg_fll_ana_obsd:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/dv5t_crg_fll_ana_obsd/dv5t_crg_fll_ana_obsd.grid.yaml
+    map:          ${root_dir}/bench/dv5t_crg_fll_ana_obsd/dv5t_crg_fll_ana_obsd.map.yaml
+    constraint:   ${root_dir}/bench/dv5t_crg_fll_ana_obsd/dv5t_crg_fll_ana_obsd.constraint.rl.yaml
+    lef:                                       
+                - ${root_dir}/bench/dv5t_crg_fll_ana_obsd/dv5t_crg_fll_ana_obsd.template.lef
+                - ${root_dir}/bench/dv5t_crg_fll_ana_obsd/dv5t_crg_fll_ana_obsd.via.lef
+    drc:          ${root_dir}/bench/dv5t_crg_fll_ana_obsd/layers.drc.yaml
+    netlist:      ${root_dir}/bench/dv5t_crg_fll_ana_obsd/dv5t_crg_fll_ana_obsd.cir
+    in_place:     ${root_dir}/bench/dv5t_crg_fll_ana_obsd/dv5t_crg_fll_ana_obsd.place.man
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+
+  dv5t_crg_fll_ana_vco4:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/dv5t_crg_fll_ana_vco4/dv5t_crg_fll_ana_vco4.grid.yaml
+    map:          ${root_dir}/bench/dv5t_crg_fll_ana_vco4/dv5t_crg_fll_ana_vco4.map.yaml
+    constraint:   ${root_dir}/bench/dv5t_crg_fll_ana_vco4/dv5t_crg_fll_ana_vco4.constraint.rl.2.yaml
+    lef:
+                - ${root_dir}/bench/dv5t_crg_fll_ana_vco4/dv5t_crg_fll_ana_vco4.template.lef
+                - ${root_dir}/bench/dv5t_crg_fll_ana_vco4/dv5t_crg_fll_ana_vco4.via.lef
+    drc:          ${root_dir}/bench/dv5t_crg_fll_ana_vco4/layers.drc.yaml
+    netlist:      ${root_dir}/bench/dv5t_crg_fll_ana_vco4/dv5t_crg_fll_ana_vco4.cir
+    in_place:     ${root_dir}/bench/dv5t_crg_fll_ana_vco4/dv5t_crg_fll_ana_vco4.place.man
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  
+  dv5t_crg_fll_ana_vco4_core:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/dv5t_crg_fll_ana_vco4_core/dv5t_crg_fll_ana_vco4_core.grid.yaml
+    map:          ${root_dir}/bench/dv5t_crg_fll_ana_vco4_core/dv5t_crg_fll_ana_vco4_core.map.yaml
+    constraint:   ${root_dir}/bench/dv5t_crg_fll_ana_vco4_core/dv5t_crg_fll_ana_vco4_core.constraint.rl.yaml
+    lef:
+                - ${root_dir}/bench/dv5t_crg_fll_ana_vco4_core/dv5t_crg_fll_ana_vco4_core.template.lef
+                - ${root_dir}/bench/dv5t_crg_fll_ana_vco4_core/dv5t_crg_fll_ana_vco4_core.via.lef
+    drc:          ${root_dir}/bench/dv5t_crg_fll_ana_vco4_core/layers.drc.yaml
+    netlist:      ${root_dir}/bench/dv5t_crg_fll_ana_vco4_core/dv5t_crg_fll_ana_vco4_core.cir
+    in_place:     ${root_dir}/bench/dv5t_crg_fll_ana_vco4_core/dv5t_crg_fll_ana_vco4_core.place.man
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  
+  isr_des:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/isr_des/isr_des.grid.4.yaml
+    map:          ${root_dir}/bench/isr_des/isr_des.map.yaml
+    constraint:   ${root_dir}/bench/isr_des/isr_des.constraint.rl.yaml
+    lef:                   
+                - ${root_dir}/bench/isr_des/isr_des.template.2.lef
+                - ${root_dir}/bench/isr_des/isr_des.via.2.lef
+    drc:          ${root_dir}/bench/isr_des/layers.drc.yaml
+    netlist:      ${root_dir}/bench/isr_des/isr_des.cir
+    in_place:     ${root_dir}/out/isr_des.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+
+  isr_clk_pi:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/isr_clk_pi/isr_clk_pi.grid.yaml
+    map:          ${root_dir}/bench/isr_clk_pi/isr_clk_pi.map.yaml
+    constraint:   ${root_dir}/bench/isr_clk_pi/isr_clk_pi.constraint.yaml
+
+    lef:
+                - ${root_dir}/bench/isr_clk_pi/isr_clk_pi.template.lef
+                - ${root_dir}/bench/isr_clk_pi/isr_clk_pi.via.lef
+
+    drc:          ${root_dir}/bench/isr_clk_pi/layers.drc.yaml
+    netlist:      ${root_dir}/bench/isr_clk_pi/isr_clk_pi.cir
+    in_place:     ${root_dir}/bench/isr_clk_pi/isr_clk_pi.place.man
+    in_route_gds: ${root_dir}/bench/isr_clk_pi/isr_clk_pi.gds
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  isr_clk_pi_pruned:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.grid.yaml
+    map:          ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.map.yaml
+    constraint:   ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.constraint.yaml
+
+    lef:
+                - ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.template.lef
+                - ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.via.lef
+
+    drc:          ${root_dir}/bench/isr_clk_pi_pruned/layers.drc.yaml
+    netlist:      ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.cir
+    in_place:     ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.place.man
+    in_route_gds: ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi.gds
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  isr_clk_pi_pruned_s1:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.grid.yaml
+    map:          ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.map.yaml
+    constraint:   ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.constraint.s1.yaml
+
+    lef:
+                - ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.template.lef
+                - ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.via.lef
+
+    drc:          ${root_dir}/bench/isr_clk_pi_pruned/layers.drc.yaml
+    netlist:      ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.cir
+    in_place:     ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.place.man
+    in_route_gds: ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi.gds
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  isr_clk_pi_pruned_s2:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.grid.yaml
+    map:          ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.map.yaml
+    constraint:   ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.constraint.s2.yaml
+
+    lef:
+                - ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.template.lef
+                - ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.via.lef
+
+    drc:          ${root_dir}/bench/isr_clk_pi_pruned/layers.drc.yaml
+    netlist:      ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.cir
+    in_place:     ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.place.man
+    in_route_gds: ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi.gds
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  isr_clk_pi_pruned_s3:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.grid.yaml
+    map:          ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.map.yaml
+    constraint:   ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.constraint.s3.yaml
+
+    lef:
+                - ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.template.lef
+                - ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.via.lef
+
+    drc:          ${root_dir}/bench/isr_clk_pi_pruned/layers.drc.yaml
+    netlist:      ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.cir
+    in_place:     ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi_pruned.place.man
+    in_route_gds: ${root_dir}/bench/isr_clk_pi_pruned/isr_clk_pi.gds
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+
+  magic_array_inv_0:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_inv/magic_array_inv.grid.yaml
+    map:          ${root_dir}/bench/magic_array_inv/magic_array_inv.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_inv/magic_array_inv.0.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_inv/magic_array_inv.template.lef
+                - ${root_dir}/bench/magic_array_inv/magic_array_inv.via.lef
+    drc:          ${root_dir}/bench/magic_array_inv/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_inv/magic_array_inv.0.cir
+    in_place:     ${root_dir}/out/magic_array_inv.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_inv_1:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_inv/magic_array_inv.grid.yaml
+    map:          ${root_dir}/bench/magic_array_inv/magic_array_inv.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_inv/magic_array_inv.1.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_inv/magic_array_inv.template.lef
+                - ${root_dir}/bench/magic_array_inv/magic_array_inv.via.lef
+    drc:          ${root_dir}/bench/magic_array_inv/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_inv/magic_array_inv.1.cir
+    in_place:     ${root_dir}/out/magic_array_inv.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_inv_2:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_inv/magic_array_inv.grid.yaml
+    map:          ${root_dir}/bench/magic_array_inv/magic_array_inv.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_inv/magic_array_inv.2.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_inv/magic_array_inv.template.lef
+                - ${root_dir}/bench/magic_array_inv/magic_array_inv.via.lef
+    drc:          ${root_dir}/bench/magic_array_inv/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_inv/magic_array_inv.2.cir
+    in_place:     ${root_dir}/out/magic_array_inv.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_inv_3:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_inv/magic_array_inv.grid.yaml
+    map:          ${root_dir}/bench/magic_array_inv/magic_array_inv.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_inv/magic_array_inv.3.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_inv/magic_array_inv.template.lef
+                - ${root_dir}/bench/magic_array_inv/magic_array_inv.via.lef
+    drc:          ${root_dir}/bench/magic_array_inv/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_inv/magic_array_inv.3.cir
+    in_place:     ${root_dir}/out/magic_array_inv.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_inv_4:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_inv/magic_array_inv.grid.yaml
+    map:          ${root_dir}/bench/magic_array_inv/magic_array_inv.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_inv/magic_array_inv.4.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_inv/magic_array_inv.template.lef
+                - ${root_dir}/bench/magic_array_inv/magic_array_inv.via.lef
+    drc:          ${root_dir}/bench/magic_array_inv/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_inv/magic_array_inv.4.cir
+    in_place:     ${root_dir}/out/magic_array_inv.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_inv_5:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_inv/magic_array_inv.grid.yaml
+    map:          ${root_dir}/bench/magic_array_inv/magic_array_inv.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_inv/magic_array_inv.5.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_inv/magic_array_inv.template.lef
+                - ${root_dir}/bench/magic_array_inv/magic_array_inv.via.lef
+    drc:          ${root_dir}/bench/magic_array_inv/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_inv/magic_array_inv.5.cir
+    in_place:     ${root_dir}/out/magic_array_inv.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_inv_6:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_inv/magic_array_inv.grid.yaml
+    map:          ${root_dir}/bench/magic_array_inv/magic_array_inv.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_inv/magic_array_inv.6.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_inv/magic_array_inv.template.lef
+                - ${root_dir}/bench/magic_array_inv/magic_array_inv.via.lef
+    drc:          ${root_dir}/bench/magic_array_inv/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_inv/magic_array_inv.6.cir
+    in_place:     ${root_dir}/out/magic_array_inv.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_inv_7:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_inv/magic_array_inv.grid.yaml
+    map:          ${root_dir}/bench/magic_array_inv/magic_array_inv.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_inv/magic_array_inv.7.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_inv/magic_array_inv.template.lef
+                - ${root_dir}/bench/magic_array_inv/magic_array_inv.via.lef
+    drc:          ${root_dir}/bench/magic_array_inv/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_inv/magic_array_inv.7.cir
+    in_place:     ${root_dir}/out/magic_array_inv.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_inv_8:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_inv/magic_array_inv.grid.yaml
+    map:          ${root_dir}/bench/magic_array_inv/magic_array_inv.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_inv/magic_array_inv.8.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_inv/magic_array_inv.template.lef
+                - ${root_dir}/bench/magic_array_inv/magic_array_inv.via.lef
+    drc:          ${root_dir}/bench/magic_array_inv/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_inv/magic_array_inv.8.cir
+    in_place:     ${root_dir}/out/magic_array_inv.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_inv_9:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_inv/magic_array_inv.grid.yaml
+    map:          ${root_dir}/bench/magic_array_inv/magic_array_inv.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_inv/magic_array_inv.9.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_inv/magic_array_inv.template.lef
+                - ${root_dir}/bench/magic_array_inv/magic_array_inv.via.lef
+    drc:          ${root_dir}/bench/magic_array_inv/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_inv/magic_array_inv.9.cir
+    in_place:     ${root_dir}/out/magic_array_inv.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_latch_0:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_latch/magic_array_latch.grid.yaml
+    map:          ${root_dir}/bench/magic_array_latch/magic_array_latch.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_latch/magic_array_latch.0.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_latch/magic_array_latch.template.lef
+                - ${root_dir}/bench/magic_array_latch/magic_array_latch.via.lef
+    drc:          ${root_dir}/bench/magic_array_latch/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_latch/magic_array_latch.0.cir
+    in_place:     ${root_dir}/out/magic_array_latch.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_latch_1:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_latch/magic_array_latch.grid.yaml
+    map:          ${root_dir}/bench/magic_array_latch/magic_array_latch.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_latch/magic_array_latch.1.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_latch/magic_array_latch.template.lef
+                - ${root_dir}/bench/magic_array_latch/magic_array_latch.via.lef
+    drc:          ${root_dir}/bench/magic_array_latch/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_latch/magic_array_latch.1.cir
+    in_place:     ${root_dir}/out/magic_array_latch.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_latch_2:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_latch/magic_array_latch.grid.yaml
+    map:          ${root_dir}/bench/magic_array_latch/magic_array_latch.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_latch/magic_array_latch.2.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_latch/magic_array_latch.template.lef
+                - ${root_dir}/bench/magic_array_latch/magic_array_latch.via.lef
+    drc:          ${root_dir}/bench/magic_array_latch/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_latch/magic_array_latch.2.cir
+    in_place:     ${root_dir}/out/magic_array_latch.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_latch_3:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_latch/magic_array_latch.grid.yaml
+    map:          ${root_dir}/bench/magic_array_latch/magic_array_latch.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_latch/magic_array_latch.3.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_latch/magic_array_latch.template.lef
+                - ${root_dir}/bench/magic_array_latch/magic_array_latch.via.lef
+    drc:          ${root_dir}/bench/magic_array_latch/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_latch/magic_array_latch.3.cir
+    in_place:     ${root_dir}/out/magic_array_latch.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_latch_4:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_latch/magic_array_latch.grid.yaml
+    map:          ${root_dir}/bench/magic_array_latch/magic_array_latch.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_latch/magic_array_latch.4.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_latch/magic_array_latch.template.lef
+                - ${root_dir}/bench/magic_array_latch/magic_array_latch.via.lef
+    drc:          ${root_dir}/bench/magic_array_latch/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_latch/magic_array_latch.4.cir
+    in_place:     ${root_dir}/out/magic_array_latch.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_latch_5:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_latch/magic_array_latch.grid.yaml
+    map:          ${root_dir}/bench/magic_array_latch/magic_array_latch.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_latch/magic_array_latch.5.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_latch/magic_array_latch.template.lef
+                - ${root_dir}/bench/magic_array_latch/magic_array_latch.via.lef
+    drc:          ${root_dir}/bench/magic_array_latch/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_latch/magic_array_latch.5.cir
+    in_place:     ${root_dir}/out/magic_array_latch.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_latch_6:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_latch/magic_array_latch.grid.yaml
+    map:          ${root_dir}/bench/magic_array_latch/magic_array_latch.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_latch/magic_array_latch.6.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_latch/magic_array_latch.template.lef
+                - ${root_dir}/bench/magic_array_latch/magic_array_latch.via.lef
+    drc:          ${root_dir}/bench/magic_array_latch/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_latch/magic_array_latch.6.cir
+    in_place:     ${root_dir}/out/magic_array_latch.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_latch_7:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_latch/magic_array_latch.grid.yaml
+    map:          ${root_dir}/bench/magic_array_latch/magic_array_latch.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_latch/magic_array_latch.7.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_latch/magic_array_latch.template.lef
+                - ${root_dir}/bench/magic_array_latch/magic_array_latch.via.lef
+    drc:          ${root_dir}/bench/magic_array_latch/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_latch/magic_array_latch.7.cir
+    in_place:     ${root_dir}/out/magic_array_latch.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_latch_8:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_latch/magic_array_latch.grid.yaml
+    map:          ${root_dir}/bench/magic_array_latch/magic_array_latch.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_latch/magic_array_latch.8.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_latch/magic_array_latch.template.lef
+                - ${root_dir}/bench/magic_array_latch/magic_array_latch.via.lef
+    drc:          ${root_dir}/bench/magic_array_latch/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_latch/magic_array_latch.8.cir
+    in_place:     ${root_dir}/out/magic_array_latch.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_latch_9:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_latch/magic_array_latch.grid.yaml
+    map:          ${root_dir}/bench/magic_array_latch/magic_array_latch.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_latch/magic_array_latch.9.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_latch/magic_array_latch.template.lef
+                - ${root_dir}/bench/magic_array_latch/magic_array_latch.via.lef
+    drc:          ${root_dir}/bench/magic_array_latch/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_latch/magic_array_latch.9.cir
+    in_place:     ${root_dir}/out/magic_array_latch.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_dff_0:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_dff/magic_array_dff.grid.yaml
+    map:          ${root_dir}/bench/magic_array_dff/magic_array_dff.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_dff/magic_array_dff.0.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_dff/magic_array_dff.template.lef
+                - ${root_dir}/bench/magic_array_dff/magic_array_dff.via.lef
+    drc:          ${root_dir}/bench/magic_array_dff/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_dff/magic_array_dff.0.cir
+    in_place:     ${root_dir}/out/magic_array_dff.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_dff_1:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_dff/magic_array_dff.grid.yaml
+    map:          ${root_dir}/bench/magic_array_dff/magic_array_dff.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_dff/magic_array_dff.1.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_dff/magic_array_dff.template.lef
+                - ${root_dir}/bench/magic_array_dff/magic_array_dff.via.lef
+    drc:          ${root_dir}/bench/magic_array_dff/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_dff/magic_array_dff.1.cir
+    in_place:     ${root_dir}/out/magic_array_dff.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_dff_2:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_dff/magic_array_dff.grid.yaml
+    map:          ${root_dir}/bench/magic_array_dff/magic_array_dff.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_dff/magic_array_dff.2.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_dff/magic_array_dff.template.lef
+                - ${root_dir}/bench/magic_array_dff/magic_array_dff.via.lef
+    drc:          ${root_dir}/bench/magic_array_dff/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_dff/magic_array_dff.2.cir
+    in_place:     ${root_dir}/out/magic_array_dff.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_dff_3:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_dff/magic_array_dff.grid.yaml
+    map:          ${root_dir}/bench/magic_array_dff/magic_array_dff.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_dff/magic_array_dff.3.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_dff/magic_array_dff.template.lef
+                - ${root_dir}/bench/magic_array_dff/magic_array_dff.via.lef
+    drc:          ${root_dir}/bench/magic_array_dff/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_dff/magic_array_dff.3.cir
+    in_place:     ${root_dir}/out/magic_array_dff.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_dff_4:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_dff/magic_array_dff.grid.yaml
+    map:          ${root_dir}/bench/magic_array_dff/magic_array_dff.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_dff/magic_array_dff.4.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_dff/magic_array_dff.template.lef
+                - ${root_dir}/bench/magic_array_dff/magic_array_dff.via.lef
+    drc:          ${root_dir}/bench/magic_array_dff/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_dff/magic_array_dff.4.cir
+    in_place:     ${root_dir}/out/magic_array_dff.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_dff_5:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_dff/magic_array_dff.grid.yaml
+    map:          ${root_dir}/bench/magic_array_dff/magic_array_dff.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_dff/magic_array_dff.5.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_dff/magic_array_dff.template.lef
+                - ${root_dir}/bench/magic_array_dff/magic_array_dff.via.lef
+    drc:          ${root_dir}/bench/magic_array_dff/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_dff/magic_array_dff.5.cir
+    in_place:     ${root_dir}/out/magic_array_dff.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_dff_6:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_dff/magic_array_dff.grid.yaml
+    map:          ${root_dir}/bench/magic_array_dff/magic_array_dff.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_dff/magic_array_dff.6.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_dff/magic_array_dff.template.lef
+                - ${root_dir}/bench/magic_array_dff/magic_array_dff.via.lef
+    drc:          ${root_dir}/bench/magic_array_dff/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_dff/magic_array_dff.6.cir
+    in_place:     ${root_dir}/out/magic_array_dff.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_dff_7:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_dff/magic_array_dff.grid.yaml
+    map:          ${root_dir}/bench/magic_array_dff/magic_array_dff.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_dff/magic_array_dff.7.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_dff/magic_array_dff.template.lef
+                - ${root_dir}/bench/magic_array_dff/magic_array_dff.via.lef
+    drc:          ${root_dir}/bench/magic_array_dff/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_dff/magic_array_dff.7.cir
+    in_place:     ${root_dir}/out/magic_array_dff.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_dff_8:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_dff/magic_array_dff.grid.yaml
+    map:          ${root_dir}/bench/magic_array_dff/magic_array_dff.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_dff/magic_array_dff.8.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_dff/magic_array_dff.template.lef
+                - ${root_dir}/bench/magic_array_dff/magic_array_dff.via.lef
+    drc:          ${root_dir}/bench/magic_array_dff/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_dff/magic_array_dff.8.cir
+    in_place:     ${root_dir}/out/magic_array_dff.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600
+  magic_array_dff_9:
+    laygo_config: ${root_dir}/bench/laygo_config.yaml
+    grid:         ${root_dir}/bench/magic_array_dff/magic_array_dff.grid.yaml
+    map:          ${root_dir}/bench/magic_array_dff/magic_array_dff.map.yaml
+    constraint:   ${root_dir}/bench/magic_array_dff/magic_array_dff.9.yaml
+    lef:
+                - ${root_dir}/bench/magic_array_dff/magic_array_dff.template.lef
+                - ${root_dir}/bench/magic_array_dff/magic_array_dff.via.lef
+    drc:          ${root_dir}/bench/magic_array_dff/layers.drc.yaml
+    netlist:      ${root_dir}/bench/magic_array_dff/magic_array_dff.9.cir
+    in_place:     ${root_dir}/out/magic_array_dff.place
+    route_dr_ps_drc_cost: 12000
+    route_dr_ps_his_cost: 600

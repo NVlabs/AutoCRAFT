@@ -1,0 +1,17 @@
+magic_array_dff_0:
+  laygo_config: ${root_dir}/bench/laygo_config.yaml
+  grid:         ${root_dir}/bench/magic_array_dff/magic_array_dff.grid.yaml
+  map:          ${root_dir}/bench/magic_array_dff/magic_array_dff.map.yaml
+  constraint:   ${root_dir}/bench/magic_array_dff/magic_array_dff.0.yaml
+
+  lef:
+              - ${root_dir}/bench/magic_array_dff/magic_array_dff.template.lef
+              - ${root_dir}/bench/magic_array_dff/magic_array_dff.via.lef
+
+  drc:          ${root_dir}/bench/magic_array_dff/layers.drc.yaml
+  netlist:      ${root_dir}/bench/magic_array_dff/magic_array_dff.0.cir
+  in_place:     ${root_dir}/out/magic_array_dff.place"
+  #out_place:    ""
+  route_dr_ps_drc_cost: 12000
+  route_dr_ps_his_cost: 600
+
